@@ -1,4 +1,4 @@
-package App;
+package App.Book;
 
 public class Book {
     private String BookId;
