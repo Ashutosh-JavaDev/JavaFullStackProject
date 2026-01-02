@@ -1,6 +1,6 @@
 package App;
 
-public class book {
+public class Book {
     private String BookId;
     private String title;
     private String author;
