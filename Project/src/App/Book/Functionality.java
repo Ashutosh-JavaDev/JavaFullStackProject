@@ -43,4 +43,22 @@ public class Functionality {
     public void update() {
 
     }
+
+    // Remove
+    public void remove() {
+
+    }
+
+    // search
+    public void search() {
+
+    }
+    // view
+    public void view() {
+
+    }
+    // Availavble
+    public void viewAvailable() {
+
+    }
 }
