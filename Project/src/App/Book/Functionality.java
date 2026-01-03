@@ -23,7 +23,7 @@ public class Functionality {
 
             String str = sc.nextLine();
 
-            if (str.equals(" ")) {
+            if (str.equals("")) {
                 return;
             } else {
                 try {
