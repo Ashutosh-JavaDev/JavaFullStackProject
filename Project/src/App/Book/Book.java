@@ -9,61 +9,60 @@ public class Book {
     private String availablecopies;
     private boolean status;
 
-  
     public void setBookId(String bookId) {
         BookId = bookId;
     }
+
     public String getBookId() {
         return BookId;
     }
 
-
-   
-
     public void setTitle(String title) {
         this.title = title;
     }
+
     public String getTitle() {
         return title;
-    }
-    public String getAuthor() {
-        return author;
     }
 
     public void setAuthor(String author) {
         this.author = author;
     }
 
-    public String getCategory() {
-        return category;
+    public String getAuthor() {
+        return author;
     }
 
     public void setCategory(String category) {
         this.category = category;
     }
 
-    public String getTotalcopies() {
-        return totalcopies;
+    public String getCategory() {
+        return category;
     }
 
     public void setTotalcopies(String totalcopies) {
         this.totalcopies = totalcopies;
     }
 
-    public String getAvailablecopies() {
-        return availablecopies;
+    public String getTotalcopies() {
+        return totalcopies;
     }
 
     public void setAvailablecopies(String availablecopies) {
         this.availablecopies = availablecopies;
     }
 
-    public boolean isStatus() {
-        return status;
+    public String getAvailablecopies() {
+        return availablecopies;
     }
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public boolean isStatus() {
+        return status;
     }
 
 }
