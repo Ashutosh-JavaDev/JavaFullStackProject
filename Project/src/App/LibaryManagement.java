@@ -1,71 +1,68 @@
 package App;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
-
 import App.Book.Functionality;
 
 public class LibaryManagement {
+
     public void allFunction() {
 
         Functionality function = new Functionality();
-
         Scanner sc = new Scanner(System.in);
+
         System.out.println(
-                "---------------------------_____________Press Enter to Start_____________-------------------------");
-        String str = sc.nextLine();
+                "--------------------------- Press Enter to Start ---------------------------");
+        sc.nextLine(); // wait for Enter
 
         while (true) {
+            System.out.println(
+                    "\nPress Enter to Stop\n" +
+                    "Press 1. To Add\n" +
+                    "Press 2. To Update\n" +
+                    "Press 3. To Delete\n" +
+                    "Press 4. To Search\n" +
+                    "Press 5. To View all Book\n" +
+                    "Press 6. To View Available Books"
+            );
 
-            try {
-                System.out.println(
-                        "Press Enter to Stop\nPress 1.To Add\nPress 2. To Update\nPress 3. To Delete\nPress 4. To Search\nPress 5. To View all Book\nPress 6. To View Available Books");
-                int num = sc.nextInt();
-                switch (num) {
-                    case 1:
-                        function.addBook();
-                        while (true) {
-                            System.out.println(
-                                    "Press Enter to Stop\nPress 2. To Update\nPress 3. To Delete\nPress 4. To Search\nPress 5. To View all Book\nPress 6. To View Available Books");
-                            String choose = sc.nextLine();
-                            if (choose.equals("")) {
-                                return;
-                            } else {
+            String input = sc.nextLine().trim();
 
-                                int choice = sc.nextInt();
-                                switch (choice) {
-                                    case 2:
-                                        function.remove();
-                                        break;
-                                    case 3:
-                                        function.update();
-                                        break;
-                                    case 4:
-                                        function.search();
-                                        break;
-                                    case 5:
-                                        function.view();
-                                        break;
-                                    case 6:
-                                        function.viewAvailable();
-                                        break;
+            // Exit condition
+            if (input.isEmpty()) {
+                System.out.println("Program stopped.");
+                return;
+            }
 
-                                    default:
-                                        System.out.println("Choice Error");
-                                        break;
-                                }
-                            }
-                        }
+            // Validate numeric input
+            if (!input.matches("\\d+")) {
+                System.out.println("Invalid input. Enter a number.");
+                continue;
+            }
 
-                    default:
-                        System.out.println("Libary is empty,add Book First");
-                        break;
-                }
-            } catch (InputMismatchException e) {
+            int num = Integer.parseInt(input);
 
-                e.printStackTrace();
+            switch (num) {
+                case 1:
+                    function.addBook();
+                    break;
+                case 2:
+                    function.update();
+                    break;
+                case 3:
+                    function.remove();
+                    break;
+                case 4:
+                    function.search();
+                    break;
+                case 5:
+                    function.view();
+                    break;
+                case 6:
+                    function.viewAvailable();
+                    break;
+                default:
+                    System.out.println("Invalid choice.");
             }
         }
     }
-
 }
