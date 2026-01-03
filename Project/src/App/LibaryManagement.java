@@ -15,14 +15,11 @@ public class LibaryManagement {
         String str = sc.nextLine();
 
         while (true) {
-
-            System.out.println(
-                    "Press Enter to Stop\nPress 1.To Add\nPress 2. To Update\nPress 3. To Delete\nPress 4. To Search\nPress 5. To View all Book\nPress 6. To View Available Books");
-            if (str.equals(" ")) {
-                return;
-            } else {
+          
                 try {
-                    int num = Integer.parseInt(str);
+                    System.out.println(
+                        "Press Enter to Stop\nPress 1.To Add\nPress 2. To Update\nPress 3. To Delete\nPress 4. To Search\nPress 5. To View all Book\nPress 6. To View Available Books");
+                    int num = sc.nextInt();
                     switch (num) {
                         case 1:
                             function.addBook();
@@ -71,4 +68,3 @@ public class LibaryManagement {
         }
 
     }
-}

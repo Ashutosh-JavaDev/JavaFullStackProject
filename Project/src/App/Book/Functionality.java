@@ -17,9 +17,12 @@ public class Functionality {
 
         HashMap<String, String> bookname = new HashMap<>();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Book Name\nPress Enter to Exit");
-        String str = sc.nextLine();
+        System.out.println("Press Enter to Exit");
         while (true) {
+            System.out.println("Enter the Book Name");
+
+            String str = sc.nextLine();
+
             if (str.equals(" ")) {
                 return;
             } else {
@@ -31,6 +34,7 @@ public class Functionality {
                     String authorName = book.getAuthor();
                     bookname.put(title, authorName);
                     System.out.println("_______________Book added Succesfully_____________");
+                    System.out.println(bookname.get(str));
 
                 } catch (InputMismatchException e) {
                     e.printStackTrace();
@@ -53,10 +57,12 @@ public class Functionality {
     public void search() {
 
     }
+
     // view
     public void view() {
 
     }
+
     // Availavble
     public void viewAvailable() {
 
