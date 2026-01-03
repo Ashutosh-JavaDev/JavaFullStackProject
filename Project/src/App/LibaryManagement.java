@@ -1,8 +1,10 @@
-package App.Book;
+package App;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-class LibaryManagement {
+import App.Book.Functionality;
+
+public class LibaryManagement {
     public void allFunction() {
 
         Functionality function = new Functionality();
