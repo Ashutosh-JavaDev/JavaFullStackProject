@@ -30,11 +30,17 @@ public class Functionality {
                     book.setAuthor(sc.nextLine());
                     String authorName = book.getAuthor();
                     bookname.put(title, authorName);
+                    System.out.println("_______________Book added Succesfully_____________");
 
                 } catch (InputMismatchException e) {
                     e.printStackTrace();
                 }
             }
         }
+    }
+
+    // Update
+    public void update() {
+
     }
 }
