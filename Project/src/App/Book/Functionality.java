@@ -12,10 +12,10 @@ public class Functionality {
     // search(by title,author,category)
     // view all books
     // view only available books
-    public void addBook(HashMap<String, String> bookname) {
-        Book book=new Book();
+    public void addBook() {
+        Book book = new Book();
 
-        bookname = new HashMap<>();
+        HashMap<String, String> bookname = new HashMap<>();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Book Name\nPress Enter to Exit");
         String str = sc.nextLine();
@@ -25,7 +25,7 @@ public class Functionality {
             } else {
                 try {
                     book.setTitle(str);
-                    String title=book.getTitle();
+                    String title = book.getTitle();
                     System.out.println("Enter the Author Name");
                     book.setAuthor(sc.nextLine());
                     String authorName = book.getAuthor();
