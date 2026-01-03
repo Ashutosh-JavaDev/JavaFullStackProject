@@ -24,10 +24,12 @@ public class Functionality {
                 return;
             } else {
                 try {
-                    str=book.getTitle();
+                    book.setTitle(str);
+                    String title=book.getTitle();
                     System.out.println("Enter the Author Name");
+                    book.setAuthor(sc.nextLine());
                     String authorName = book.getAuthor();
-                    bookname.put(str, authorName);
+                    bookname.put(title, authorName);
 
                 } catch (InputMismatchException e) {
                     e.printStackTrace();
