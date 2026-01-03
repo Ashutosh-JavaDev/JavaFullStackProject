@@ -9,22 +9,23 @@ public class Book {
     private String availablecopies;
     private boolean status;
 
+  
+    public void setBookId(String bookId) {
+        BookId = bookId;
+    }
     public String getBookId() {
         return BookId;
     }
 
-    public void setBookId(String bookId) {
-        BookId = bookId;
-    }
 
-    public String getTitle() {
-        return title;
-    }
+   
 
     public void setTitle(String title) {
         this.title = title;
     }
-
+    public String getTitle() {
+        return title;
+    }
     public String getAuthor() {
         return author;
     }

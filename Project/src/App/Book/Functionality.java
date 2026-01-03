@@ -13,7 +13,7 @@ public class Functionality {
     // view all books
     // view only available books
     public void addBook(HashMap<String, String> bookname) {
-        new Book();
+        Book book=new Book();
 
         bookname = new HashMap<>();
         Scanner sc = new Scanner(System.in);
@@ -24,8 +24,9 @@ public class Functionality {
                 return;
             } else {
                 try {
+                    str=book.getTitle();
                     System.out.println("Enter the Author Name");
-                    String authorName = sc.nextLine();
+                    String authorName = book.getAuthor();
                     bookname.put(str, authorName);
 
                 } catch (InputMismatchException e) {
