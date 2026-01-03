@@ -1,10 +1,12 @@
+package App;
 import App.Book.Functionality;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class LibaryManagement {
-    public static void main(String[] args) {
+class LibaryManagement {
+    public void allFunction() {
+
         Functionality function = new Functionality();
 
         Scanner sc = new Scanner(System.in);
