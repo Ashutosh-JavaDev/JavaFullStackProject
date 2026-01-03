@@ -1,6 +1,4 @@
-package App;
-import App.Book.Functionality;
-
+package App.Book;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
